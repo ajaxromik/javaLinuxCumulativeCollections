@@ -10,37 +10,44 @@
  * @version: 2023.10.11
  */
 
-public class QueueSLS<T> implements QueueInterface{
+public class QueueSLS<T> implements QueueInterface<T>{
 
 	protected Node front;
 	protected Node end;
 
 	public QueueSLS() {
-		front = null;
-		end = null;
+		this.front = null;
+		this.end = null;
+	}
+
+	public void dequeueAll() {
+		this.front = null;
+		this.end = null;
 	}
 
 	public boolean isEmpty() {
 		return front == null;
 	}
 
-	public T peek() {
-		return front.getItem();
+	public T peek() throws QueueException{
+		if(front != null)
+			return (T)front.getItem();
+		else throw new QueueException("peek: queue is empty");
 	}
 
-	public void enqueue(T item) {
+	public void enqueue(T item) throws QueueException{
 		Node temp = new Node(item);
 		if(end != null)
 			end.setNext(temp);
 		else
-			front = temp;
-		end = temp;
+			this.front = temp;
+		this.end = temp;
 	}
 
-	public T dequeue() {
+	public T dequeue() throws QueueException{
 		if(front != null) {
-			T result = front.getItem();
-			front = front.getNext();
+			T result = (T)front.getItem();
+			this.front = front.getNext();
 			if(front == null)
 				end = null;
 			return result;

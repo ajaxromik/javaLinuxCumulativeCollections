@@ -10,7 +10,7 @@
  * @version: 2023.10.11
  */
 
-public class QueueCRAB<T> implements QueueInterface{
+public class QueueCRAB<T> implements QueueInterface<T>{
 
 	protected int numItems;
 	protected T[] items;
@@ -22,22 +22,28 @@ public class QueueCRAB<T> implements QueueInterface{
 		numItems = front = back = 0; //multiple assignments
 	}
 
+	public void dequeueAll() {
+		items = (T[]) new Object[3];
+		numItems = front = back = 0;
+	}
+
 	public boolean isEmpty() {
 		return numItems == 0;
 	}
 
-	public T peek() {
+	public T peek() throws QueueException{
 		if(numItems != 0)
 			return items[front];
-		else throw QueueException();
+		else throw new QueueException("peek: queue is empty");
 	}
 
-	public void enqueue(T item) {
+	public void enqueue(T item) throws QueueException{
 		int itemsLen = items.length;
 		if(numItems == itemsLen)
 			resize();
 		items[back] = item;
 		back = (back + 1) % itemsLen;
+		numItems++;
 	}
 
 	private void resize() {
@@ -49,7 +55,7 @@ public class QueueCRAB<T> implements QueueInterface{
 		items = temp;
 	}
 
-	public T dequeue() {
+	public T dequeue() throws QueueException{
 		if(numItems != 0) {
 			T result = items[front];
 			items[front] = null;
