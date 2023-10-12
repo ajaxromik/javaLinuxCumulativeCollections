@@ -17,23 +17,19 @@ public class Lab6P1Driver {
 
     public static void main(String[] args) throws NumberFormatException, IOException, InstantiationException, ClassNotFoundException, IllegalAccessException {
 
-        QueueInterface<String> mainQueue;
-        try {
-            mainQueue = (QueueInterface<String>)
-                        Class.forName(args[0]).newInstance();
-        }
-        catch(Exception e) {
-            mainQueue = new QueueCRAB<>();
-        }
+        ExtendedQueueInterface<T> mainDEQ = new DEQ<>();
 
         System.out.println("\nSelect from the following menu:\n"
                            +"\t0. Exit Program\n"
-                           +"\t1. Insert item at back of FIFO collection\n"
-                           +"\t2. Remove item from front of FIFO collection\n"
-                           +"\t3. Display front item of FIFO collection\n"
-                           +"\t4. Clear FIFO collection\n"
-                           +"\t5. Display number of items and content\n"
-                           +" of FIFO collection");
+                           +"\t1. Insert item at back\n"
+                           +"\t2. Insert item at front\n"
+                           +"\t3. Remove item from front\n"
+                           +"\t4. Remove item from back\n"
+                           +"\t5. Display front item\n"
+                           +"\t6. Display last item\n"
+                           +"\t7. Clear collection\n"
+                           +"\t8. Display number of items "
+                           +"and content of collection\n");
 
         int selection;
         boolean continuing = true;
@@ -45,19 +41,28 @@ public class Lab6P1Driver {
 
             switch(selection) {
             case 1:
-                pushBack(mainQueue);
+                pushBack(mainDEQ);
                 break;
             case 2:
-                popFront(mainQueue);
+                pushFront(mainDEQ);
                 break;
             case 3:
-                peekFront(mainQueue);
+                popFront(mainDEQ);
                 break;
             case 4:
-                dequeueAll(mainQueue);
+                popBack(mainDEQ);
                 break;
             case 5:
-                printQueue(mainQueue);
+                peekFront(mainDEQ);
+                break;
+            case 6:
+                peekBack(mainDEQ);
+                break;
+            case 7:
+                dequeueAll(mainDEQ);
+                break;
+            case 8:
+                printQueue(mainDEQ);
                 break;
             default: // continuing unless told to stop
                 continuing = false;
@@ -69,47 +74,58 @@ public class Lab6P1Driver {
 
     }
 
-    public static void pushBack(QueueInterface<String> queue) throws IOException {
+    public static void pushBack(ExtendedQueueInterface<T> deq) throws IOException {
         System.out.print("You are now adding an item"+
-                         " to the end of the queue.\n\tEnter item: ");
+                         " to the end of the DEQ.\n\tEnter item: ");
         String itemName = stdin.readLine().trim();
         System.out.println(itemName);
 
-        queue.enqueue(itemName);
+        deq.enqueue(itemName);
         System.out.printf("Item %s inserted onto"+
-                          " the back of the queue.%n%n", itemName);
+                          " the back of the DEQ.%n%n", itemName);
     }
 
-    public static void popFront(QueueInterface<String> queue) {
-        if(queue.isEmpty())
-            System.out.println("Queue is empty.\n\n");
+    public static void pushFront(ExtendedQueueInterface<T> deq) throws IOException {
+        System.out.print("You are now adding an item"+
+                         " to the end of the DEQ.\n\tEnter item: ");
+        String itemName = stdin.readLine().trim();
+        System.out.println(itemName);
+
+        deq.enqueue(itemName);
+        System.out.printf("Item %s inserted onto"+
+                          " the back of the DEQ.%n%n", itemName);
+    }
+
+    public static void popFront(ExtendedQueueInterface<T> deq) {
+        if(deq.isEmpty())
+            System.out.println("DEQ is empty.\n\n");
         else {
             System.out.printf("Item %s removed from"+
-                              " the queue.%n%n", queue.dequeue());
+                              " the DEQ.%n%n", deq.dequeue());
         }
     }
 
-    public static void peekFront(QueueInterface<String> queue) {
-        if(queue.isEmpty())
-            System.out.println("Queue is empty.\n\n");
+    public static void peekFront(ExtendedQueueInterface<T> deq) {
+        if(deq.isEmpty())
+            System.out.println("DEQ is empty.\n\n");
         else {
             System.out.printf("Item %s retrieved from"+
-                              " the front of the queue.%n%n",
-                              queue.peek());
+                              " the front of the DEQ.%n%n",
+                              deq.peek());
         }
     }
 
-    public static void dequeueAll(QueueInterface<String> queue) {
-        queue.dequeueAll();
+    public static void dequeueAll(ExtendedQueueInterface<T> deq) {
+        deq.dequeueAll();
         System.out.println();
     }
 
-    public static void printQueue(QueueInterface<String> queue) {
-        if(queue == null || queue.isEmpty())
-            System.out.print("Queue is empty.\n\n");
+    public static void printQueue(ExtendedQueueInterface<T> deq) {
+        if(deq == null || deq.isEmpty())
+            System.out.print("DEQ is empty.\n\n");
         else
-            System.out.printf("Queue has the following items: %s%n%n",
-                              queue.toString());
+            System.out.printf("DEQ has the following items: %s%n%n",
+                              deq.toString());
     }
 
 }
