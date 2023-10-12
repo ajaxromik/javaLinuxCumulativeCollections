@@ -77,7 +77,7 @@ public class DriverL6P0 {
 
         queue.enqueue(itemName);
         System.out.printf("Item %s inserted onto"+
-                          " the top of the queue.%n%n", itemName);
+                          " the back of the queue.%n%n", itemName);
     }
 
     public static void popFront(QueueInterface<String> queue) {
@@ -94,7 +94,7 @@ public class DriverL6P0 {
             System.out.println("Queue is empty.\n\n");
         else {
             System.out.printf("Item %s retrieved from"+
-                              " the top of the queue.%n%n",
+                              " the front of the queue.%n%n",
                               queue.peek());
         }
     }
