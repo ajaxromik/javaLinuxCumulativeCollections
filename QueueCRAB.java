@@ -10,7 +10,7 @@
  * @version: 2023.10.11
  */
 
-public class QueueCRAB {
+public class QueueCRAB<T> implements QueueInterface{
 
 	int numItems;
 	T[] items;

@@ -10,7 +10,7 @@
  * @version: 2023.10.11
  */
 
-public class QueueSLS implements QueueInterface{
+public class QueueSLS<T> implements QueueInterface{
 
 	Node front;
 	Node end;
