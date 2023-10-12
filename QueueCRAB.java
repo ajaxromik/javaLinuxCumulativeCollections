@@ -39,8 +39,10 @@ public class QueueCRAB<T> implements QueueInterface<T>{
 
 	public void enqueue(T item) throws QueueException{
 		int itemsLen = items.length;
-		if(numItems == itemsLen)
+		if(numItems == itemsLen){
 			resize();
+			itemsLen = itemsLen << 1;
+		}
 		items[back] = item;
 		back = (back + 1) % itemsLen;
 		numItems++;
@@ -51,7 +53,7 @@ public class QueueCRAB<T> implements QueueInterface<T>{
 		T[] temp = (T[]) new Object[itemsLen*2];
 		for(int i = 0; i < numItems; i++) {
 			temp[i] = items[(front+i) % itemsLen];
-			// System.out.printf("%n!i: %d%nindex: %d%nitem: %s!%n", i, (front+i) % itemsLen, temp[i]);
+			System.out.printf("%n!i: %d%nindex: %d%nitem: %s!%n", i, (front+i) % itemsLen, temp[i]);
 		}
 		//after all this happens, front and back are messed up
 		this.front = 0;

@@ -16,12 +16,14 @@ public class DEQ<T> extends QueueCRAB<T> implements ExtendedQueueInterface<T>{
 	//enqueue == enqueueBack
 
 	public void enqueueFront(T item) {
-		numItems++;
 		int itemsLen = items.length;
-		if(numItems == itemsLen)
+		if(numItems == itemsLen){
 			resize();
+			itemsLen = itemsLen << 1; // items.length is doubled after resize
+		}
 		front = (itemsLen + front - 1) % itemsLen;
 		items[front] = item;
+		numItems++;
 	}
 
 	//dequeue == dequeueFront
