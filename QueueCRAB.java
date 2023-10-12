@@ -51,8 +51,12 @@ public class QueueCRAB<T> implements QueueInterface<T>{
 		T[] temp = (T[]) new Object[itemsLen*2];
 		for(int i = 0; i < numItems; i++) {
 			temp[i] = items[(front+i) % itemsLen];
+			// System.out.printf("%n!i: %d%nindex: %d%nitem: %s!%n", i, (front+i) % itemsLen, temp[i]);
 		}
-		items = temp;
+		//after all this happens, front and back are messed up
+		this.front = 0;
+		this.back = numItems;
+		this.items = temp;
 	}
 
 	public T dequeue() throws QueueException{
@@ -69,7 +73,7 @@ public class QueueCRAB<T> implements QueueInterface<T>{
 	public String toString() {
 		int itemsLen = items.length;
 		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < itemsLen; i++) {
+		for(int i = 0; i < numItems; i++) {
 			sb.append(items[(front+i) % itemsLen] + " ");
 		}
 		return sb.toString();
