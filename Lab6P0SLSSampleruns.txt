@@ -1,0 +1,79 @@
+
+Select from the following menu:
+	0. Exit Program
+	1. Insert item at back of FIFO collection
+	2. Remove item from front of FIFO collection
+	3. Display front item of FIFO collection
+	4. Clear FIFO collection
+	5. Display number of items and content
+ of FIFO collection
+Make your menu selection now: 2
+Queue is empty.
+
+
+Make your menu selection now: 3
+Queue is empty.
+
+
+Make your menu selection now: 5
+Queue is empty.
+
+Make your menu selection now: 1
+You are now adding an item to the end of the queue.
+	Enter item: Can
+Item Can inserted onto the back of the queue.
+
+Make your menu selection now: 5
+Queue has the following items: Can 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the queue.
+	Enter item: bottle
+Item bottle inserted onto the back of the queue.
+
+Make your menu selection now: 3
+Item Can retrieved from the front of the queue.
+
+Make your menu selection now: 5
+Queue has the following items: Can bottle 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the queue.
+	Enter item: cup
+Item cup inserted onto the back of the queue.
+
+Make your menu selection now: 2
+Item Can removed from the queue.
+
+Make your menu selection now: 5
+Queue has the following items: bottle cup 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the queue.
+	Enter item: cone
+Item cone inserted onto the back of the queue.
+
+Make your menu selection now: 5
+Queue has the following items: bottle cup cone 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the queue.
+	Enter item: shelf
+Item shelf inserted onto the back of the queue.
+
+Make your menu selection now: 5
+Queue has the following items: bottle cup cone shelf 
+
+Make your menu selection now: 3
+Item bottle retrieved from the front of the queue.
+
+Make your menu selection now: 2
+Item bottle removed from the queue.
+
+Make your menu selection now: 4
+
+Make your menu selection now: 5
+Queue is empty.
+
+Make your menu selection now: 0
+Exiting program... Goodbye!
