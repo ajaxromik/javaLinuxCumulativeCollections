@@ -87,13 +87,13 @@ public class Lab6P1Driver {
 
     public static void pushFront(ExtendedQueueInterface<T> deq) throws IOException {
         System.out.print("You are now adding an item"+
-                         " to the end of the DEQ.\n\tEnter item: ");
+                         " to the front of the DEQ.\n\tEnter item: ");
         String itemName = stdin.readLine().trim();
         System.out.println(itemName);
 
-        deq.enqueue(itemName);
+        deq.enqueueFront(itemName);
         System.out.printf("Item %s inserted onto"+
-                          " the back of the DEQ.%n%n", itemName);
+                          " the front of the DEQ.%n%n", itemName);
     }
 
     public static void popFront(ExtendedQueueInterface<T> deq) {
