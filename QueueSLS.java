@@ -48,4 +48,14 @@ public class QueueSLS<T> implements QueueInterface{
 		else throw new QueueException("dequeue: queue is empty");
 	}
 
+	public String toString() {
+		Node current = front;
+		StringBuilder sb = new StringBuilder();
+		while(current != null) {
+			sb.append(current.getItem() + " ");
+			current = current.getNext();
+		}
+		return sb.toString();
+	}
+
 }
