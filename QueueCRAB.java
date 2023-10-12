@@ -38,21 +38,17 @@ public class QueueCRAB<T> implements QueueInterface<T> {
     }
 
     public void enqueue(T item) throws QueueException {
-        int itemsLen = items.length;
-        if(numItems == itemsLen) {
+        if(numItems == items.length)
             resize();
-            itemsLen = itemsLen << 1;
-        }
         items[back] = item;
-        back = (back + 1) % itemsLen;
+        back = (back + 1) % items.length;
         numItems++;
     }
 
     protected void resize() {
-        int itemsLen = items.length;
-        T[] temp = (T[]) new Object[itemsLen*2];
+        T[] temp = (T[]) new Object[items.length*2];
         for(int i = 0; i < numItems; i++) {
-            temp[i] = items[(front+i) % itemsLen];
+            temp[i] = items[(front+i) % items.length];
         }
         //after all this happens, front and back are messed up
         this.front = 0;
@@ -72,10 +68,9 @@ public class QueueCRAB<T> implements QueueInterface<T> {
     }
 
     public String toString() {
-        int itemsLen = items.length;
         StringBuilder sb = new StringBuilder();
         for(int i = 0; i < numItems; i++) {
-            sb.append(items[(front+i) % itemsLen] + " ");
+            sb.append(items[(front+i) % items.length] + " ");
         }
         return sb.toString();
     }

@@ -19,21 +19,17 @@ public class DEQ<T> extends QueueCRAB<T> implements ExtendedQueueInterface<T>{
 	//peek == peekFront
 
 	public T peekBack() {
-		int itemsLen = items.length;
 		if(numItems != 0)
-			return items[(itemsLen + back - 1) % itemsLen];
+			return items[(items.length + back - 1) % items.length];
 		else throw new ExtendedQueueException("peek: DEQ is empty");
 	}
 
 	//enqueue == enqueueBack
 
 	public void enqueueFront(T item) {
-		int itemsLen = items.length;
-		if(numItems == itemsLen){
+		if(numItems == items.length)
 			resize();
-			itemsLen = itemsLen << 1; // items.length is doubled after resize
-		}
-		front = (itemsLen + front - 1) % itemsLen;
+		front = (items.length + front - 1) % items.length;
 		items[front] = item;
 		numItems++;
 	}
@@ -41,9 +37,8 @@ public class DEQ<T> extends QueueCRAB<T> implements ExtendedQueueInterface<T>{
 	//dequeue == dequeueFront
 
 	public T dequeueBack() {
-		int itemsLen = items.length;
 		if(numItems != 0) {
-			back = (itemsLen + back - 1) % itemsLen; //modulo removes comparison
+			back = (items.length + back - 1) % items.length; //modulo removes comparison
 			T result = items[back];
 			items[back] = null;
 			numItems--;

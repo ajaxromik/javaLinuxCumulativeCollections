@@ -12,8 +12,8 @@
 
 public class QueueSLS<T> implements QueueInterface<T> {
 
-    protected Node front;
-    protected Node end;
+    protected Node<T> front;
+    protected Node<T> end;
 
     public QueueSLS() {
         this.front = null;
@@ -31,7 +31,7 @@ public class QueueSLS<T> implements QueueInterface<T> {
 
     public T peek() throws QueueException {
         if(front != null)
-            return (T)front.getItem();
+            return front.getItem();
         else throw new QueueException("peek: queue is empty");
     }
 
@@ -46,7 +46,7 @@ public class QueueSLS<T> implements QueueInterface<T> {
 
     public T dequeue() throws QueueException {
         if(front != null) {
-            T result = (T)front.getItem();
+            T result = front.getItem();
             this.front = front.getNext();
             if(front == null)
                 end = null;
