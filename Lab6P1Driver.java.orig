@@ -20,7 +20,7 @@ public class Lab6P1Driver {
         ExtendedQueueInterface<String> mainDEQ;
         try {
             mainDEQ = (ExtendedQueueInterface<String>)
-                      Class.forName(args[0]).newInstance();
+                        Class.forName(args[0]).newInstance();
         }
         catch(Exception e) {
             mainDEQ = new DEQ<>();

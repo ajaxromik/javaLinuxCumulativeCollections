@@ -10,75 +10,74 @@
  * @version: 2023.10.11
  */
 
-public class QueueCRAB<T> implements QueueInterface<T>{
+public class QueueCRAB<T> implements QueueInterface<T> {
 
-	protected int numItems;
-	protected T[] items;
-	protected int back;
-	protected int front;
+    protected int numItems;
+    protected T[] items;
+    protected int back;
+    protected int front;
 
-	public QueueCRAB() {
-		items = (T[]) new Object[3];
-		numItems = front = back = 0; //multiple assignments
-	}
+    public QueueCRAB() {
+        items = (T[]) new Object[3];
+        numItems = front = back = 0; //multiple assignments
+    }
 
-	public void dequeueAll() {
-		items = (T[]) new Object[3];
-		numItems = front = back = 0;
-	}
+    public void dequeueAll() {
+        items = (T[]) new Object[3];
+        numItems = front = back = 0;
+    }
 
-	public boolean isEmpty() {
-		return numItems == 0;
-	}
+    public boolean isEmpty() {
+        return numItems == 0;
+    }
 
-	public T peek() throws QueueException{
-		if(numItems != 0)
-			return items[front];
-		else throw new QueueException("peek: queue is empty");
-	}
+    public T peek() throws QueueException {
+        if(numItems != 0)
+            return items[front];
+        else throw new QueueException("peek: queue is empty");
+    }
 
-	public void enqueue(T item) throws QueueException{
-		int itemsLen = items.length;
-		if(numItems == itemsLen){
-			resize();
-			itemsLen = itemsLen << 1;
-		}
-		items[back] = item;
-		back = (back + 1) % itemsLen;
-		numItems++;
-	}
+    public void enqueue(T item) throws QueueException {
+        int itemsLen = items.length;
+        if(numItems == itemsLen) {
+            resize();
+            itemsLen = itemsLen << 1;
+        }
+        items[back] = item;
+        back = (back + 1) % itemsLen;
+        numItems++;
+    }
 
-	protected void resize() {
-		int itemsLen = items.length;
-		T[] temp = (T[]) new Object[itemsLen*2];
-		for(int i = 0; i < numItems; i++) {
-			temp[i] = items[(front+i) % itemsLen];
-			System.out.printf("%n!i: %d%nindex: %d%nitem: %s!%n", i, (front+i) % itemsLen, temp[i]);
-		}
-		//after all this happens, front and back are messed up
-		this.front = 0;
-		this.back = numItems;
-		this.items = temp;
-	}
+    protected void resize() {
+        int itemsLen = items.length;
+        T[] temp = (T[]) new Object[itemsLen*2];
+        for(int i = 0; i < numItems; i++) {
+            temp[i] = items[(front+i) % itemsLen];
+        }
+        //after all this happens, front and back are messed up
+        this.front = 0;
+        this.back = numItems;
+        this.items = temp;
+    }
 
-	public T dequeue() throws QueueException{
-		if(numItems != 0) {
-			T result = items[front];
-			items[front] = null;
-			front = (front + 1) % items.length; //modulo removes comparison
-			numItems--;
-			return result;
-		}
-		else throw new QueueException("dequeue: queue is empty");
-	}
+    public T dequeue() throws QueueException {
+        if(numItems != 0) {
+            T result = items[front];
+            items[front] = null;
+            front = (front + 1) % items.length; //modulo removes comparison
+            numItems--;
+            return result;
+        }
+        else throw new QueueException("dequeue: queue is empty");
+    }
 
-	public String toString() {
-		int itemsLen = items.length;
-		StringBuilder sb = new StringBuilder();
-		for(int i = 0; i < numItems; i++) {
-			sb.append(items[(front+i) % itemsLen] + " ");
-		}
-		return sb.toString();
-	}
+    public String toString() {
+        int itemsLen = items.length;
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0; i < numItems; i++) {
+            sb.append(items[(front+i) % itemsLen] + " ");
+        }
+        return sb.toString();
+    }
 
 }

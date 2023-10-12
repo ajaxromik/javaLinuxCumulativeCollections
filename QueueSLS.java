@@ -10,59 +10,59 @@
  * @version: 2023.10.11
  */
 
-public class QueueSLS<T> implements QueueInterface<T>{
+public class QueueSLS<T> implements QueueInterface<T> {
 
-	protected Node front;
-	protected Node end;
+    protected Node front;
+    protected Node end;
 
-	public QueueSLS() {
-		this.front = null;
-		this.end = null;
-	}
+    public QueueSLS() {
+        this.front = null;
+        this.end = null;
+    }
 
-	public void dequeueAll() {
-		this.front = null;
-		this.end = null;
-	}
+    public void dequeueAll() {
+        this.front = null;
+        this.end = null;
+    }
 
-	public boolean isEmpty() {
-		return front == null;
-	}
+    public boolean isEmpty() {
+        return front == null;
+    }
 
-	public T peek() throws QueueException{
-		if(front != null)
-			return (T)front.getItem();
-		else throw new QueueException("peek: queue is empty");
-	}
+    public T peek() throws QueueException {
+        if(front != null)
+            return (T)front.getItem();
+        else throw new QueueException("peek: queue is empty");
+    }
 
-	public void enqueue(T item) throws QueueException{
-		Node temp = new Node(item);
-		if(end != null)
-			end.setNext(temp);
-		else
-			this.front = temp;
-		this.end = temp;
-	}
+    public void enqueue(T item) throws QueueException {
+        Node temp = new Node(item);
+        if(end != null)
+            end.setNext(temp);
+        else
+            this.front = temp;
+        this.end = temp;
+    }
 
-	public T dequeue() throws QueueException{
-		if(front != null) {
-			T result = (T)front.getItem();
-			this.front = front.getNext();
-			if(front == null)
-				end = null;
-			return result;
-		}
-		else throw new QueueException("dequeue: queue is empty");
-	}
+    public T dequeue() throws QueueException {
+        if(front != null) {
+            T result = (T)front.getItem();
+            this.front = front.getNext();
+            if(front == null)
+                end = null;
+            return result;
+        }
+        else throw new QueueException("dequeue: queue is empty");
+    }
 
-	public String toString() {
-		Node current = front;
-		StringBuilder sb = new StringBuilder();
-		while(current != null) {
-			sb.append(current.getItem() + " ");
-			current = current.getNext();
-		}
-		return sb.toString();
-	}
+    public String toString() {
+        Node current = front;
+        StringBuilder sb = new StringBuilder();
+        while(current != null) {
+            sb.append(current.getItem() + " ");
+            current = current.getNext();
+        }
+        return sb.toString();
+    }
 
 }

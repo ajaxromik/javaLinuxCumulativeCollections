@@ -1,2 +1,2 @@
 Problem 0: compiles, runs correctly on all provided input
-Problem 1: not done yet
+Problem 1: compiles, runs correctly on all provided input

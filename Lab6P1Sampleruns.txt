@@ -1,0 +1,126 @@
+
+Select from the following menu:
+	0. Exit Program
+	1. Insert item at back
+	2. Insert item at front
+	3. Remove item from front
+	4. Remove item from back
+	5. Display front item
+	6. Display last item
+	7. Clear collection
+	8. Display number of items and content of collection
+
+Make your menu selection now: 3
+DEQ is empty.
+
+
+Make your menu selection now: 4
+DEQ is empty.
+
+
+Make your menu selection now: 5
+DEQ is empty.
+
+
+Make your menu selection now: 6
+DEQ is empty.
+
+
+Make your menu selection now: 8
+DEQ is empty.
+
+Make your menu selection now: 1
+You are now adding an item to the end of the DEQ.
+	Enter item: Can
+Item Can inserted onto the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: Can 
+
+Make your menu selection now: 2
+You are now adding an item to the front of the DEQ.
+	Enter item: bottle
+Item bottle inserted onto the front of the DEQ.
+
+Make your menu selection now: 5
+Item bottle retrieved from the front of the DEQ.
+
+Make your menu selection now: 6
+Item Can retrieved from the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: bottle Can 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the DEQ.
+	Enter item: cup
+Item cup inserted onto the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: bottle Can cup 
+
+Make your menu selection now: 3
+Item bottle removed from the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: Can cup 
+
+Make your menu selection now: 4
+Item cup removed from the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: Can 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the DEQ.
+	Enter item: bag
+Item bag inserted onto the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: Can bag 
+
+Make your menu selection now: 2
+You are now adding an item to the front of the DEQ.
+	Enter item: book
+Item book inserted onto the front of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: book Can bag 
+
+Make your menu selection now: 2
+You are now adding an item to the front of the DEQ.
+	Enter item: apple
+Item apple inserted onto the front of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: apple book Can bag 
+
+Make your menu selection now: 1
+You are now adding an item to the end of the DEQ.
+	Enter item: juice
+Item juice inserted onto the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: apple book Can bag juice 
+
+Make your menu selection now: 5
+Item apple retrieved from the front of the DEQ.
+
+Make your menu selection now: 6
+Item juice retrieved from the back of the DEQ.
+
+Make your menu selection now: 7
+
+Make your menu selection now: 8
+DEQ is empty.
+
+Make your menu selection now: 1
+You are now adding an item to the end of the DEQ.
+	Enter item: cow
+Item cow inserted onto the back of the DEQ.
+
+Make your menu selection now: 8
+DEQ has the following items: cow 
+
+Make your menu selection now: 0
+Exiting program... Goodbye!

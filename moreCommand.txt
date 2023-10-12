@@ -1,1 +1,1 @@
-more Lab6Status.txt Lab6Conclusions.txt DriverL6P0.java QueueSLS.java Node.java QueueCRAB.java QueueInterface.java QueueException.java Lab6P0SLSSampleruns.txt Lab6P0CRABSampleruns.txt Lab6P1Driver.java > allfiles.txt
+more Lab6Status.txt Lab6Conclusions.txt DriverL6P0.java QueueSLS.java Node.java QueueCRAB.java QueueInterface.java QueueException.java Lab6P0SLSSampleruns.txt Lab6P0CRABSampleruns.txt Lab6P1Driver.java DEQ.java ExtendedQueueInterface.java ExtendedQueueException.java Lab6P1Sampleruns.txt > allfiles.txt
