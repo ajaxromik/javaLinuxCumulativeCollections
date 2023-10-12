@@ -1,7 +1,7 @@
 import java.io.*;
 
 /*
- * Purpose: Data Structure and Algorithms Lab 6 Problem 1
+ * Purpose: Data Structure and Algorithms Lab 6 Problem 0
  * Status: Complete and thoroughly tested
  * Last update: 10/11/23
  * Submitted:  10/11/23
@@ -11,7 +11,7 @@ import java.io.*;
  * @version: 2023.10.11
  */
 
-public class Lab6P1Driver {
+public class DriverL6P0 {
 
     static BufferedReader stdin = new BufferedReader(new InputStreamReader(System.in));
 
@@ -85,7 +85,7 @@ public class Lab6P1Driver {
             System.out.println("Queue is empty.\n\n");
         else {
             System.out.printf("Item %s removed from"+
-                              " the queue.%n%n", queue.pop());
+                              " the queue.%n%n", queue.dequeue());
         }
     }
 
@@ -99,7 +99,7 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void clearQueue(QueueInterface<String> queue) {
+    public static void dequeueAll(QueueInterface<String> queue) {
         queue.dequeueAll();
         System.out.println();
     }

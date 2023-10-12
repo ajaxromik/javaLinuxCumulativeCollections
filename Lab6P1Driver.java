@@ -85,7 +85,7 @@ public class Lab6P1Driver {
             System.out.println("Queue is empty.\n\n");
         else {
             System.out.printf("Item %s removed from"+
-                              " the queue.%n%n", queue.pop());
+                              " the queue.%n%n", queue.dequeue());
         }
     }
 
@@ -99,7 +99,7 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void clearQueue(QueueInterface<String> queue) {
+    public static void dequeueAll(QueueInterface<String> queue) {
         queue.dequeueAll();
         System.out.println();
     }
