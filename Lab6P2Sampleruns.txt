@@ -1,0 +1,357 @@
+
+Select from the following menu:
+	0. Exit program
+		1. Pick up order
+		2. Drop off order
+		3. Display delivery bag info: number of packages, weight, and content
+		4. Display samples bag info: number of samples, weight, and content
+		5. Enjoy an item from samples bag
+		6. Enjoy all the samples in the samples bag
+
+Make your menu selection now: 3
+Delivery bag has:  nothing.
+
+Make your menu selection now: 4
+Sample bag has:  nothing.
+
+Make your menu selection now: 5
+no samples to enjoy!
+
+Make your menu selection now: 6
+Sample bag is already empty.
+
+Make your menu selection now: 2
+No deliveries to process!
+
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: apple
+item weight: 0.6
+number of items: 10
+is this a healthy item?(Y/N): Y
+sender: Pikachu
+reciever: Mew
+A package of apples, each weighing 0.60 lbs are now in the delivery bag.
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 1
+Weight: 6.00
+Items: 
+10 apples, each weighing 0.60 lbs from Pikachu to Mew.
+
+
+Make your menu selection now: 4
+Sample bag has:  nothing.
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: orange
+item weight: 0.85
+number of items: 14
+is this a healthy item?(Y/N): Y
+sender: Bulbasaur
+reciever: Abra
+A package of oranges, each weighing 0.85 lbs are now in the delivery bag.
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: candy
+item weight: 0.9
+number of items: 7
+is this a healthy item?(Y/N): N
+sender: Abra
+reciever: Kadabra
+A package of candys, each weighing 0.90 lbs are now in the delivery bag.
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: health bar
+item weight: 0.3
+number of items: 5
+is this a healthy item?(Y/N): Y
+sender: Mew
+reciever: Pichu
+A package of health bars, each weighing 0.30 lbs are now in the delivery bag.
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 4
+Weight: 25.70
+Items: 
+10 apples, each weighing 0.60 lbs from Pikachu to Mew.
+14 oranges, each weighing 0.85 lbs from Bulbasaur to Abra.
+7 candys, each weighing 0.90 lbs from Abra to Kadabra.
+5 health bars, each weighing 0.30 lbs from Mew to Pichu.
+
+
+Make your menu selection now: 4
+Sample bag has:  nothing.
+
+Make your menu selection now: 2
+Here is your package Mew. 
+May I please, please keep a sample(Y/N)? Y
+Your package contains: 10 apples, each weighing 0.60 lbs from Pikachu to Mew. 
+Thanks for letting me keep a apple! 
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 3
+Weight: 19.70
+Items: 
+14 oranges, each weighing 0.85 lbs from Bulbasaur to Abra.
+7 candys, each weighing 0.90 lbs from Abra to Kadabra.
+5 health bars, each weighing 0.30 lbs from Mew to Pichu.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: cookie
+item weight: 0.1
+number of items: 50
+is this a healthy item?(Y/N): N
+sender: Charizard
+reciever: Squirtle
+A package of cookies, each weighing 0.10 lbs are now in the delivery bag.
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: banana
+item weight: 0.5
+number of items: 22
+is this a healthy item?(Y/N): Y
+sender: Clefairy
+reciever: Vulpix
+A package of bananas, each weighing 0.50 lbs are now in the delivery bag.
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 5
+Weight: 35.70
+Items: 
+14 oranges, each weighing 0.85 lbs from Bulbasaur to Abra.
+7 candys, each weighing 0.90 lbs from Abra to Kadabra.
+5 health bars, each weighing 0.30 lbs from Mew to Pichu.
+50 cookies, each weighing 0.10 lbs from Charizard to Squirtle.
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+
+
+Make your menu selection now: 2
+Here is your package Abra. 
+May I please, please keep a sample(Y/N)? N
+Your package contains: 14 oranges, each weighing 0.85 lbs from Bulbasaur to Abra. 
+Thanks anyway.
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 4
+Weight: 23.80
+Items: 
+7 candys, each weighing 0.90 lbs from Abra to Kadabra.
+5 health bars, each weighing 0.30 lbs from Mew to Pichu.
+50 cookies, each weighing 0.10 lbs from Charizard to Squirtle.
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+
+
+Make your menu selection now: 2
+Here is your package Kadabra. 
+Your package contains: 7 candys, each weighing 0.90 lbs from Abra to Kadabra. 
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 3
+Weight: 17.50
+Items: 
+5 health bars, each weighing 0.30 lbs from Mew to Pichu.
+50 cookies, each weighing 0.10 lbs from Charizard to Squirtle.
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+
+
+Make your menu selection now: 2
+Here is your package Pichu. 
+May I please, please keep a sample(Y/N)? Y
+Your package contains: 5 health bars, each weighing 0.30 lbs from Mew to Pichu. 
+Thanks for letting me keep a health bar! 
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 2
+Weight: 16.00
+Items: 
+50 cookies, each weighing 0.10 lbs from Charizard to Squirtle.
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 2
+Weight: 0.90
+Items: 
+health bar weighs 0.3 lbs.
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 5
+This health bar is amazing. I love free stuff!
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 2
+Weight: 16.00
+Items: 
+50 cookies, each weighing 0.10 lbs from Charizard to Squirtle.
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 2
+Here is your package Squirtle. 
+Your package contains: 50 cookies, each weighing 0.10 lbs from Charizard to Squirtle. 
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: granola
+item weight: 0.5
+number of items: 25
+is this a healthy item?(Y/N): Y
+sender: Jigglypuff
+reciever: Meowth
+A package of granolas, each weighing 0.50 lbs are now in the delivery bag.
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 2
+Weight: 23.50
+Items: 
+22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix.
+25 granolas, each weighing 0.50 lbs from Jigglypuff to Meowth.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.60
+Items: 
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 2
+Here is your package Vulpix. 
+May I please, please keep a sample(Y/N)? Y
+Your package contains: 22 bananas, each weighing 0.50 lbs from Clefairy to Vulpix. 
+Thanks for letting me keep a banana! 
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 1
+Weight: 12.50
+Items: 
+25 granolas, each weighing 0.50 lbs from Jigglypuff to Meowth.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 2
+Weight: 1.10
+Items: 
+banana weighs 0.5 lbs.
+apple weighs 0.6 lbs.
+
+
+Make your menu selection now: 6
+Enjoying banana
+Enjoying apple
+Sample bag has been emptied.
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 1
+Weight: 12.50
+Items: 
+25 granolas, each weighing 0.50 lbs from Jigglypuff to Meowth.
+
+
+Make your menu selection now: 4
+Sample bag has:  nothing.
+
+Make your menu selection now: 1
+Please specify package info: 
+item name: watermelon
+item weight: 3.7
+number of items: 3
+is this a healthy item?(Y/N): Y
+sender: Slowpoke
+reciever: Slowbro
+A package of watermelons, each weighing 3.70 lbs are now in the delivery bag.
+
+Make your menu selection now: 2
+Here is your package Meowth. 
+May I please, please keep a sample(Y/N)? Y
+Your package contains: 25 granolas, each weighing 0.50 lbs from Jigglypuff to Meowth. 
+Thanks for letting me keep a granola! 
+
+
+Make your menu selection now: 3
+Delivery bag has:  
+Number of units: 1
+Weight: 11.10
+Items: 
+3 watermelons, each weighing 3.70 lbs from Slowpoke to Slowbro.
+
+
+Make your menu selection now: 4
+Sample bag has:  
+Number of units: 1
+Weight: 0.50
+Items: 
+granola weighs 0.5 lbs.
+
+
+Make your menu selection now: 5
+This granola is amazing. I love free stuff!
+
+Make your menu selection now: 0
+Exiting program... Goodbye!
