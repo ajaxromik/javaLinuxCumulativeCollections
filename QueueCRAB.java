@@ -60,4 +60,13 @@ public class QueueCRAB<T> implements QueueInterface{
 		else throw new QueueException("dequeue: queue is empty");
 	}
 
+	public String toString() {
+		int itemsLen = items.length;
+		StringBuilder sb = new StringBuilder();
+		for(int i = 0; i < itemsLen; i++) {
+			sb.append(items[(front+i) % itemsLen] + " ");
+		}
+		return sb.toString();
+	}
+
 }
