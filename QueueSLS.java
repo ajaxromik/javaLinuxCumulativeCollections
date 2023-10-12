@@ -12,8 +12,8 @@
 
 public class QueueSLS<T> implements QueueInterface{
 
-	Node front;
-	Node end;
+	protected Node front;
+	protected Node end;
 
 	public QueueSLS() {
 		front = null;

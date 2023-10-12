@@ -12,10 +12,10 @@
 
 public class QueueCRAB<T> implements QueueInterface{
 
-	int numItems;
-	T[] items;
-	int back;
-	int front;
+	protected int numItems;
+	protected T[] items;
+	protected int back;
+	protected int front;
 
 	public QueueCRAB() {
 		items = (T[]) new Object[3];
