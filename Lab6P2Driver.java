@@ -17,8 +17,9 @@ public class Lab6P2Driver {
 
     public static void main(String[] args) throws NumberFormatException, IOException {
 
-        Bag<Package> deliveryBag = new Bag<>(args[0]);
-        Bag<Sample> sampleBag = new Bag<>(args[0]);
+        // program should be ran with these args: [List, Stack, Queue, DEQ]
+        BagFIFO<Package> deliveryBag = new BagFIFO<>(args[2]);
+        BagLIFO<Sample> sampleBag = new BagLIFO<>(args[1]);
 
         System.out.println("\nSelect from the following menu:\n"
                            +"\t0. Exit program\n"
@@ -45,10 +46,10 @@ public class Lab6P2Driver {
                 dropOrder(deliveryBag, sampleBag);
                 break;
             case 3:
-                bagInfo("Delivery", deliveryBag);
+                deliveryBagInfo(deliveryBag);
                 break;
             case 4:
-                bagInfo("Sample", sampleBag);
+                sampleBagInfo(sampleBag);
                 break;
             case 5:
                 enjoySample(sampleBag);
@@ -90,7 +91,7 @@ public class Lab6P2Driver {
         return inputDouble;
     }
 
-    public static void pushOrder(Bag b) throws IOException {
+    public static void pushOrder(BagFIFO b) throws IOException {
         System.out.print("Please specify package info: "+
                          "\nitem name: ");
         String itemName = stdin.readLine().trim();
@@ -123,7 +124,7 @@ public class Lab6P2Driver {
         }
     }
 
-    public static void dropOrder(Bag deliveryBag, Bag sampleBag) throws IOException {
+    public static void dropOrder(BagFIFO deliveryBag, BagLIFO sampleBag) throws IOException {
         if(deliveryBag.getUnits() == 0)
             System.out.println("No deliveries to process!\n\n");
         else {
@@ -141,7 +142,7 @@ public class Lab6P2Driver {
             if(healthy) {
                 if(donated == 'Y') {
                     System.out.println("Thanks for letting me keep a "+pop.getName()+"! \n");
-                    ((Bag<Sample>)sampleBag).addItem(new Sample(pop.getName(), pop.getUnitWeight()));
+                    ((BagLIFO<Sample>)sampleBag).addItem(new Sample(pop.getName(), pop.getUnitWeight()));
                 } else
                     System.out.println("Thanks anyway.");
             }
@@ -154,8 +155,8 @@ public class Lab6P2Driver {
      * @param bagName
      * @param bag   cannot be null
      */
-    public static void bagInfo(String bagName, Bag bag) {
-        System.out.print(bagName+" bag has:  ");
+    public static void deliveryBagInfo(BagFIFO bag) {
+        System.out.print("Delivery bag has:  ");
         if(bag.getUnits() == 0)
             System.out.print("nothing.\n\n");
         else
@@ -163,14 +164,28 @@ public class Lab6P2Driver {
                               bag.toString());
     }
 
-    public static void enjoySample(Bag sampleBag) {
+    /**
+     * prints the bag info with bagname as a header
+     * @param bagName
+     * @param bag   cannot be null
+     */
+    public static void sampleBagInfo(BagLIFO bag) {
+        System.out.print("Sample bag has:  ");
+        if(bag.getUnits() == 0)
+            System.out.print("nothing.\n\n");
+        else
+            System.out.printf("%n%s%n",
+                              bag.toString());
+    }
+
+    public static void enjoySample(BagLIFO sampleBag) {
         if(sampleBag.getUnits() == 0)
             System.out.println("no samples to enjoy!\n");
         else
             System.out.printf("This %s is amazing. I love free stuff!%n%n", ((Sample)sampleBag.popItem()).getName());
     }
 
-    public static void enjoyAllSamples(Bag sampleBag) {
+    public static void enjoyAllSamples(BagLIFO sampleBag) {
         int units = sampleBag.getUnits();
         if(units == 0) {
             System.out.println("Sample bag is already empty.\n");

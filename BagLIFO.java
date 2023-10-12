@@ -16,7 +16,7 @@ public class BagLIFO<T> {
     private double totalWeight;
     private StackInterface<T> collection;
 
-    public Bag(String collectionType) {
+    public BagLIFO(String collectionType) {
         this.units = 0;
         this.totalWeight = 0;
         try {

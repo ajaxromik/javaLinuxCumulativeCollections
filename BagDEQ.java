@@ -16,7 +16,7 @@ public class BagDEQ<T> {
     private double totalWeight;
     private ExtendedQueueInterface<T> collection;
 
-    public Bag(String collectionType) {
+    public BagDEQ(String collectionType) {
         this.units = 0;
         this.totalWeight = 0;
         try {

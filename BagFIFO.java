@@ -10,13 +10,13 @@
  * @version: 2023.10.12
  */
 
-public class BagLIFO<T> {
+public class BagFIFO<T> {
 
     private int units;
     private double totalWeight;
     private QueueInterface<T> collection;
 
-    public Bag(String collectionType) {
+    public BagFIFO(String collectionType) {
         this.units = 0;
         this.totalWeight = 0;
         try {

@@ -16,7 +16,7 @@ public class List<T> implements ListInterface<T> {
     private T []items;  // an array of list items
     private int numItems;  // number of items in list
 
-    public ListArrayBased()
+    public List()
     {
         items = (T[])new Object[MAX_LIST];
         numItems = 0;
