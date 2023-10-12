@@ -17,7 +17,7 @@ public class Lab6P1Driver {
 
     public static void main(String[] args) throws NumberFormatException, IOException, InstantiationException, ClassNotFoundException, IllegalAccessException {
 
-        ExtendedQueueInterface<T> mainDEQ = new DEQ<>();
+        ExtendedQueueInterface<String> mainDEQ = new DEQ<>();
 
         System.out.println("\nSelect from the following menu:\n"
                            +"\t0. Exit Program\n"
@@ -74,7 +74,7 @@ public class Lab6P1Driver {
 
     }
 
-    public static void pushBack(ExtendedQueueInterface<T> deq) throws IOException {
+    public static void pushBack(ExtendedQueueInterface<String> deq) throws IOException {
         System.out.print("You are now adding an item"+
                          " to the end of the DEQ.\n\tEnter item: ");
         String itemName = stdin.readLine().trim();
@@ -85,7 +85,7 @@ public class Lab6P1Driver {
                           " the back of the DEQ.%n%n", itemName);
     }
 
-    public static void pushFront(ExtendedQueueInterface<T> deq) throws IOException {
+    public static void pushFront(ExtendedQueueInterface<String> deq) throws IOException {
         System.out.print("You are now adding an item"+
                          " to the front of the DEQ.\n\tEnter item: ");
         String itemName = stdin.readLine().trim();
@@ -96,7 +96,7 @@ public class Lab6P1Driver {
                           " the front of the DEQ.%n%n", itemName);
     }
 
-    public static void popFront(ExtendedQueueInterface<T> deq) {
+    public static void popFront(ExtendedQueueInterface<String> deq) {
         if(deq.isEmpty())
             System.out.println("DEQ is empty.\n\n");
         else {
@@ -105,7 +105,7 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void popBack(ExtendedQueueInterface<T> deq) {
+    public static void popBack(ExtendedQueueInterface<String> deq) {
         if(deq.isEmpty())
             System.out.println("DEQ is empty.\n\n");
         else {
@@ -114,7 +114,7 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void peekFront(ExtendedQueueInterface<T> deq) {
+    public static void peekFront(ExtendedQueueInterface<String> deq) {
         if(deq.isEmpty())
             System.out.println("DEQ is empty.\n\n");
         else {
@@ -124,7 +124,7 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void peekFront(ExtendedQueueInterface<T> deq) {
+    public static void peekBack(ExtendedQueueInterface<String> deq) {
         if(deq.isEmpty())
             System.out.println("DEQ is empty.\n\n");
         else {
@@ -134,12 +134,12 @@ public class Lab6P1Driver {
         }
     }
 
-    public static void dequeueAll(ExtendedQueueInterface<T> deq) {
+    public static void dequeueAll(ExtendedQueueInterface<String> deq) {
         deq.dequeueAll();
         System.out.println();
     }
 
-    public static void printQueue(ExtendedQueueInterface<T> deq) {
+    public static void printQueue(ExtendedQueueInterface<String> deq) {
         if(deq == null || deq.isEmpty())
             System.out.print("DEQ is empty.\n\n");
         else
