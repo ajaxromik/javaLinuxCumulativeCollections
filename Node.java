@@ -1,3 +1,15 @@
+
+/*
+ * Purpose: Data Structure and Algorithms Lab 6 Problem 2
+ * Status: Complete and thoroughly tested
+ * Last update: 10/12/22
+ * Submitted:  10/12/22
+ * Comment: test suite and sample run attached
+ * Comment: I declare that this is entirely my own work
+ * @author: William Carr
+ * @version: 2023.10.12
+ */
+
 public class Node<T> {
     private T item;
     private Node<T> next;
