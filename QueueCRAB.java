@@ -50,13 +50,14 @@ public class QueueCRAB {
 	}
 
 	public T dequeue() {
-		if(!isEmpty()) {
+		if(numItems != 0) {
 			T result = items[front];
 			items[front] = null;
 			front = (front + 1) % items.length; //modulo removes comparison
 			numItems--;
 			return result;
 		}
+		else throw new QueueException("dequeue: queue is empty");
 	}
 
 }

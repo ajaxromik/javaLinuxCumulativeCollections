@@ -10,7 +10,7 @@
  * @version: 2023.10.11
  */
 
-public class QueueSLS {
+public class QueueSLS implements QueueInterface{
 
 	Node front;
 	Node end;
@@ -45,7 +45,7 @@ public class QueueSLS {
 				end = null;
 			return result;
 		}
-		else throw new QueueException();
+		else throw new QueueException("dequeue: queue is empty");
 	}
 
 }
