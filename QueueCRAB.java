@@ -44,7 +44,7 @@ public class QueueCRAB<T> implements QueueInterface{
 		int itemsLen = items.length;
 		T[] temp = (T[]) new Object[itemsLen*2];
 		for(int i = 0; i < numItems; i++) {
-			temp[i] = items[(front+i) % items.length];
+			temp[i] = items[(front+i) % itemsLen];
 		}
 		items = temp;
 	}
