@@ -105,6 +105,15 @@ public class Lab6P1Driver {
         }
     }
 
+    public static void popBack(ExtendedQueueInterface<T> deq) {
+        if(deq.isEmpty())
+            System.out.println("DEQ is empty.\n\n");
+        else {
+            System.out.printf("Item %s removed from"+
+                              " the DEQ.%n%n", deq.dequeueBack());
+        }
+    }
+
     public static void peekFront(ExtendedQueueInterface<T> deq) {
         if(deq.isEmpty())
             System.out.println("DEQ is empty.\n\n");
@@ -112,6 +121,16 @@ public class Lab6P1Driver {
             System.out.printf("Item %s retrieved from"+
                               " the front of the DEQ.%n%n",
                               deq.peek());
+        }
+    }
+
+    public static void peekFront(ExtendedQueueInterface<T> deq) {
+        if(deq.isEmpty())
+            System.out.println("DEQ is empty.\n\n");
+        else {
+            System.out.printf("Item %s retrieved from"+
+                              " the back of the DEQ.%n%n",
+                              deq.peekBack());
         }
     }
 
