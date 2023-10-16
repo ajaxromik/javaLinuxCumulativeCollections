@@ -152,7 +152,7 @@ public class Lab6P3Driver {
 
         try {
             b.addFront(new Package(itemName, itemWeight,
-                                  numItems, healthy == 'Y', sender, reciever));
+                                   numItems, healthy == 'Y', sender, reciever));
 
             System.out.printf("An express package of %ss, each weighing %.2f"+
                               " lbs is now in the delivery bag.%n%n", itemName, itemWeight);

@@ -1,3 +1,0 @@
-This lab refined my java skills when it comes to using generic types,
-and taught me how modulo can be used to have numbers increment circularly.
-I also enjoyed the part with Pokemon.
